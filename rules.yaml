@@ -8,8 +8,7 @@ rules:
 
 # 第二優先級：允許核心合法服務（精簡版）
 - action: skip
-  expression: (cf.client.bot) or (http.user_agent contains "Expanse, a Palo Alto Networks company") or (http.user_agent contains "Shodan") or (http.user_agent contains "Censys") or (http.user_agent contains "UptimeRobot") or (http.user_agent contains "Pingdom") or (http.user_agent contains "Googlebot") or (http.user_agent contains "Bingbot") or (http.user_agent contains "Slurp") or (http.user_agent contains "DuckDuckBot") or (http.user_agent contains "Baiduspider") or (http.user_agent contains "YandexBot") or (http.user_agent contains "facebookexternalhit") or (http.user_agent contains "Twitterbot") or (http.user_agent contains "LinkedInBot") or (http.user_agent contains "WhatsApp") or (http.user_agent contains "Discordbot") or (http.user_agent contains "AppleBot") or (http.user_agent contains "ia_archiver")
-  name: Allow Essential Legitimate Services
+  expression: (cf.client.bot) or (http.user_agent contains "Expanse, a Palo Alto Networks company") or (http.user_agent contains "Shodan") or (http.user_agent contains "Censys") or (http.user_agent contains "UptimeRobot") or (http.user_agent contains "Pingdom") or (http.user_agent contains "Googlebot") or (http.user_agent contains "Bingbot") or (http.user_agent contains "Slurp") or (http.user_agent contains "DuckDuckBot") or (http.user_agent contains "Baiduspider") or (http.user_agent contains "YandexBot") or (http.user_agent contains "facebookexternalhit") or (http.user_agent contains "Twitterbot") or (http.user_agent contains "LinkedInBot") or (http.user_agent contains "WhatsApp") or (http.user_agent contains "Discordbot") or (http.user_agent contains "AppleBot") or (http.user_agent contains "ia_archiver") or (ip.src in {152.70.245.76 138.2.90.1})  name: Allow Essential Legitimate Services
   products:
   - waf
   - bic
